@@ -33,19 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Fallback on earlier versions
         }
         
-        if #available(iOS 10.0, *) {
-            let playAction = UNNotificationAction(identifier: "play-action", title: "Play", options: [])
-            if #available(iOS 12.0, *) {
-                let podcastCategory = UNNotificationCategory(identifier: "podcast", actions: [playAction], intentIdentifiers: [], hiddenPreviewsBodyPlaceholder: "", categorySummaryFormat:"", options: [])
-                  UNUserNotificationCenter.current().setNotificationCategories([podcastCategory])
-            } else {
-                // Fallback on earlier versions
-            }
-            
-          
-        } else {
-            // Fallback on earlier versions
-        }
+       
         return true
     }
 

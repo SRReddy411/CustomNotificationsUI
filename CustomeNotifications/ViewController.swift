@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         view.addSubview(stackView)
         stackView?.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         stackView?.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
+       
         podcastName = "StartUp"
         
         podcastNotificationButton = UIButton(type: .roundedRect)
@@ -38,6 +38,9 @@ class ViewController: UIViewController {
         podcastNotificationButton.addTarget(self, action: #selector(sendPodcastNotification(sender:)), for: .touchUpInside)
         
         stackView.addArrangedSubview(podcastNotificationButton)
+        let defaults = UserDefaults(suiteName: "group.volive.CustomeNotifications")
+        defaults?.set("Rami", forKey: "Check")
+   
     }
     @objc func sendPodcastNotification(sender: UIButton) {
         
@@ -60,10 +63,7 @@ class ViewController: UIViewController {
         } else {
             // Fallback on earlier versions
         }
-      
-        
-        
-       
+
     }
     
     @available(iOS 10.0, *)
