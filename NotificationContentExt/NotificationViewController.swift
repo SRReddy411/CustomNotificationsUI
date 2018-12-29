@@ -32,7 +32,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         rejectBtn.backgroundColor = UIColor.black
     }
     @objc func rejectButtonTapped(sender: UIButton) {
-        print("accept btn action")
+        print("Reject btn action")
          acceptBtn.backgroundColor = UIColor.black
          rejectBtn.backgroundColor = UIColor.red
         
